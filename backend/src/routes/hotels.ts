@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 import Hotel from '../models/hotel';
 import { BookingType, HotelSearchResponse } from '../shared/types';
 import { param, validationResult } from 'express-validator';
-import Stripe from 'stripe';
+// import Stripe from 'stripe';
 import verifyToken from '../middleware/auth';
 import axios from 'axios';
 import CryptoJS from 'crypto-js';
@@ -23,7 +23,7 @@ const config: IConfig = {
   endpoint: 'https://sb-openapi.zalopay.vn/v2/create',
 };
 
-const stripe = new Stripe(process.env.STRIPE_API_KEY as string);
+// const stripe = new Stripe(process.env.STRIPE_API_KEY as string);
 
 const router = express.Router();
 
